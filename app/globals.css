@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: url("/flowers.png") center/cover no-repeat;
+  min-height: 100vh;
+}
+
+
+/* ===== Google Maps Button ===== */
+.map-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 18px;
+  background: #ae576a;
+  color: #ffffff;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .map-btn {
+    font-size: 13px;
+    padding: 9px 16px;
+  }
+}
+
+/* ===== Layout ===== */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Slide ===== */
+.slide {
+  width: 100%;
+  max-width: 450px;
+  animation: fadeZoom 1.5s ease-in-out;
+}
+
+/* ===== Text ===== */
+.hold {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  color: #b84c64;
+}
+
+.date {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #b84c64;
+}
+
+.invited {
+  font-size: 42px;
+  color: #b84c64;
+}
+
+.names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  margin: 20px 0;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.mt {
+  margin-top: 10px;
+}
+
+.arabic {
+  font-family: 'Amiri', serif;
+  font-size: 22px;
+  direction: rtl;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #b84c64;
+  color: #fff;
+  border-radius: 5px 5px 300px 300px;
+  padding: 40px 25px 60px;
+  width: 100%;
+}
+
+/* ===== Date Box ===== */
+.date-box {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.place {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* ===== Falling Flowers ===== */
+.petal {
+  position: absolute;
+  top: -40px;
+  width: 26px;
+  height: 26px;
+  background-image: url("/flower.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+/* FIXED animation bug (translateY needs px) */
+@keyframes fall {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ===== Slide Transition ===== */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 480px) {
+  .hold {
+    font-size: 42px;
+  }
+
+  .invited {
+    font-size: 32px;
+  }
+
+  .names {
+    font-size: 28px;
+  }
+
+  .arabic {
+    font-size: 20px;
+  }
+
+  .date {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 30px 18px 45px;
+    border-radius: 5px 5px 200px 200px;
+  }
+
+  .petal {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hold {
+    font-size: 54px;
+  }
+
+  .invited {
+    font-size: 36px;
+  }
+
+  .names {
+    font-size: 32px;
+  }
+}
