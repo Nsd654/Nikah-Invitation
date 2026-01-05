@@ -125,30 +125,7 @@ body {
   font-size: 16px;
 }
 
-/* ===== Falling Flowers ===== */
-/* .petal {
-  position: absolute;
-  top: -40px;
-  width: 26px;
-  height: 26px;
-  background-image: url("/flower.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  pointer-events: none;
-  animation: fall linear forwards;
-} */
 
-/* FIXED animation bug (translateY needs px) */
-/* @keyframes fall {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
-} */
 
 /* ===== Slide Transition ===== */
 @keyframes fadeZoom {
@@ -189,10 +166,6 @@ body {
     border-radius: 5px 5px 200px 200px;
   }
 
-  .petal {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 /* ================= TABLET ================= */
