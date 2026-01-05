@@ -46,15 +46,15 @@ const touchEndX = useRef(0);
     return () => clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    for (let i = 0; i < 25; i++) {
-      const petal = document.createElement("div");
-      petal.className = "petal";
-      petal.style.left = Math.random() * 100 + "vw";
-      petal.style.animationDuration = 6 + Math.random() * 6 + "s";
-      document.body.appendChild(petal);
-    }
-  }, []);
+  // useEffect(() => {
+  //   for (let i = 0; i < 25; i++) {
+  //     const petal = document.createElement("div");
+  //     petal.className = "petal";
+  //     petal.style.left = Math.random() * 100 + "vw";
+  //     petal.style.animationDuration = 6 + Math.random() * 6 + "s";
+  //     document.body.appendChild(petal);
+  //   }
+  // }, []);
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
   touchStartX.current = e.touches[0].clientX;
 };

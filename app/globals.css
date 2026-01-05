@@ -126,7 +126,7 @@ body {
 }
 
 /* ===== Falling Flowers ===== */
-.petal {
+/* .petal {
   position: absolute;
   top: -40px;
   width: 26px;
@@ -136,10 +136,10 @@ body {
   background-repeat: no-repeat;
   pointer-events: none;
   animation: fall linear forwards;
-}
+} */
 
 /* FIXED animation bug (translateY needs px) */
-@keyframes fall {
+/* @keyframes fall {
   0% {
     transform: translateY(0px) rotate(0deg);
     opacity: 1;
@@ -148,7 +148,7 @@ body {
     transform: translateY(110vh) rotate(360deg);
     opacity: 0;
   }
-}
+} */
 
 /* ===== Slide Transition ===== */
 @keyframes fadeZoom {
