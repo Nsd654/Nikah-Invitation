@@ -3,8 +3,8 @@ import { useEffect, useState, useRef } from "react";
 
 
 export default function Home() {
-  const touchStartX = useRef(0);
-const touchEndX = useRef(0);
+//   const touchStartX = useRef(0);
+// const touchEndX = useRef(0);
 
   const slides = [
     <div key="1">
@@ -55,32 +55,32 @@ const touchEndX = useRef(0);
   //     document.body.appendChild(petal);
   //   }
   // }, []);
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-  touchStartX.current = e.touches[0].clientX;
-};
+//   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+//   touchStartX.current = e.touches[0].clientX;
+// };
 
-const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-  touchEndX.current = e.touches[0].clientX;
-};
+// const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+//   touchEndX.current = e.touches[0].clientX;
+// };
 
-const handleTouchEnd = () => {
-  if (touchStartX.current - touchEndX.current > 50) {
-    setIndex((prev) => (prev + 1) % slides.length);
-  }
+// const handleTouchEnd = () => {
+//   if (touchStartX.current - touchEndX.current > 50) {
+//     setIndex((prev) => (prev + 1) % slides.length);
+//   }
 
-  if (touchEndX.current - touchStartX.current > 50) {
-    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  }
-};
+//   if (touchEndX.current - touchStartX.current > 50) {
+//     setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+//   }
+// };
 
 
 
   return (
   <main
   className="container"
-  onTouchStart={handleTouchStart}
-  onTouchMove={handleTouchMove}
-  onTouchEnd={handleTouchEnd}
+  // onTouchStart={handleTouchStart}
+  // onTouchMove={handleTouchMove}
+  // onTouchEnd={handleTouchEnd}
 >
     <div key={index} className="slide fade">
       {slides[index]}
