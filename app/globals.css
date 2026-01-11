@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@700&display=swap');
+
 
 * {
   margin: 0;
@@ -12,9 +18,31 @@ html, body {
 
 body {
   font-family: 'Playfair Display', serif;
-  background: url("/flowers.png") center/cover no-repeat;
+  /* background: url("/flowers.png") center/cover no-repeat; */
   min-height: 100vh;
 }
+
+/* ===== Background Video ===== */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark overlay for readability */
+/* .video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+} */
 
 
 /* ===== Google Maps Button ===== */
@@ -43,7 +71,11 @@ body {
     padding: 9px 16px;
   }
 }
-
+@media (max-width: 768px) {
+  .bg-video {
+    filter: brightness(0.85);
+  }
+}
 /* ===== Layout ===== */
 .container {
   min-height: 100vh;
@@ -64,28 +96,33 @@ body {
 /* ===== Text ===== */
 .hold {
   font-family: 'Great Vibes', cursive;
-  font-size: 64px;
-  color: #b84c64;
+  font-size: 74px;
+  color: #3e1897;
 }
 
 .date {
   margin-top: 20px;
   font-size: 22px;
-  color: #b84c64;
+  color: #3e1897;
 }
 
 .invited {
-  font-size: 42px;
-  color: #b84c64;
+  font-family: 'Great Vibes', cursive;
+  font-size: 92px;
+  color: #3e1897;
 }
 
 .names {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Parisienne', cursive;
   font-size: 38px;
   margin: 20px 0;
+  text-shadow:
+    0 4px 10px rgba(0,0,0,0.3),
+    0 0 20px rgba(255,255,255,0.2);
 }
 
 .small {
+  font-family: 'Scheherazade New', serif;
   font-size: 14px;
 }
 
@@ -104,7 +141,7 @@ body {
 
 /* ===== Card ===== */
 .card {
-  background: #b84c64;
+  background: #759381;
   color: #fff;
   border-radius: 5px 5px 300px 300px;
   padding: 40px 25px 60px;
@@ -142,11 +179,11 @@ body {
 /* ================= MOBILE ================= */
 @media (max-width: 480px) {
   .hold {
-    font-size: 42px;
+    font-size: 52px;
   }
 
   .invited {
-    font-size: 32px;
+    font-size: 52px;
   }
 
   .names {
@@ -175,7 +212,7 @@ body {
   }
 
   .invited {
-    font-size: 36px;
+    font-size: 46px;
   }
 
   .names {
